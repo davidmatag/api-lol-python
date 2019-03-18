@@ -17,7 +17,7 @@ def champMast(_reg, _summonerId, _championId):
 
     print(json.dumps(data, indent=4))
 
-def totalScoreChamp(_reg, _summonerId, _apiKey):
+def totalScoreChampMast(_reg, _summonerId, _apiKey):
     """Get a player's total champion mastery score, which is the sum of individual champion mastery levels"""
 
     response = requests.get("https://" + _reg + ".api.riotgames.com/lol/champion-mastery/v4/scores/by-summoner/" + _summonerId + "?api_key=" + _apiKey)

@@ -25,7 +25,7 @@ def timeLineById(_reg, _matchId, _apiKey):
 
     print(json.dumps(data, indent=4))
 
-def matsByTour(_reg, _tournamentCode, _apiKey):
+def matIdByTourCode(_reg, _tournamentCode, _apiKey):
     """Get match IDs by tournament code"""
 
     response = requests.get("https://" + _reg + ".api.riotgames.com/lol/match/v4/matches/by-tournament-code/" + _tournamentCode + "/ids?api_key=" + _apiKey)
@@ -33,7 +33,7 @@ def matsByTour(_reg, _tournamentCode, _apiKey):
 
     print(json.dumps(data, indent=4))
 
-def matByIdaTour(_reg, _matchId, _tournamentCode, _apiKey):
+def matByIdaTourCode(_reg, _matchId, _tournamentCode, _apiKey):
     """Get match by match ID and tournament code"""
 
     response = requests.get("https://" + _reg + ".api.riotgames.com/lol/match/v4/matches/" + _matchId + "/by-tournament-code/" + _tournamentCode + "?api_key=" + _apiKey)

@@ -1,7 +1,7 @@
 import json
 import requests
 
-def sumByAId(_reg, _aId, _apiKey):
+def sumByAccId(_reg, _aId, _apiKey):
     """Get a summoner by account ID"""
 
     response = requests.get("https://" + _reg + ".api.riotgames.com/lol/summoner/v4/summoners/by-account/"+ _aId + "?api_key=" + _apiKey)
@@ -28,7 +28,7 @@ def sumByPid(_reg, _puuid, _apiKey):
     #print(json.dumps(data, indent=4))
     return(data)
 
-def sumBySId(_reg, _sumId, _apiKey):
+def sumBySumId(_reg, _sumId, _apiKey):
     """Get a summoner by summoner ID"""
 
     response = requests.get("https://" + _reg + ".api.riotgames.com/lol/summoner/v4/summoners/"+ _sumId + "?api_key=" + _apiKey)
